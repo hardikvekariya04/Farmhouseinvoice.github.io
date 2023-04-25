@@ -274,7 +274,7 @@ table th {
 .invoice-1 .invoice-id {
     border-radius: 0 0 0 200px;
     z-index: 0;
-    background-image: linear-gradient(to bottom, #ffb400, #ff8a00);
+    background-image: linear-gradient(to bottom, #049300, #065b04);
 }
 
 .invoice-1 .payment-method-list-1 {
@@ -315,7 +315,7 @@ table th {
 }
 
 .invoice-1 .inv-title-1 {
-    color: #ffb400;
+    color: #049300;
     margin-bottom: 5px;
 }
 
@@ -383,12 +383,12 @@ table th {
 }
 
 .invoice-1 .bg-active {
-    background-image: linear-gradient(to bottom, #ffb400, #ff8a00) !important;
+    background-image: linear-gradient(to bottom, #049300, #065b04) !important;
     color: #fff !important;
 }
 
 .invoice-1 .active-color {
-    color: #ffb400 !important;
+    color: #049300 !important;
 }
 
 .invoice-1 .invoice-bottom h3 {
@@ -423,7 +423,7 @@ table th {
     height: 30px;
     border-radius: 50px 0 0 0;
     z-index: 0;
-    background-image: linear-gradient(to bottom, #ffb400, #ff8a00);
+    background-image: linear-gradient(to bottom, #049300, #065b04);
 }
 
 /** MEDIA **/

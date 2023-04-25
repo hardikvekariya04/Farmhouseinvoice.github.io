@@ -41,7 +41,7 @@ $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
 $red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
+$#049300:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
@@ -55,7 +55,7 @@ $colors: (
   "purple":     $purple,
   "pink":       $pink,
   "red":        $red,
-  "orange":     $orange,
+  "#049300":     $#049300,
   "yellow":     $yellow,
   "green":      $green,
   "teal":       $teal,
@@ -126,15 +126,15 @@ $red-700: shade-color($red, 40%) !default;
 $red-800: shade-color($red, 60%) !default;
 $red-900: shade-color($red, 80%) !default;
 
-$orange-100: tint-color($orange, 80%) !default;
-$orange-200: tint-color($orange, 60%) !default;
-$orange-300: tint-color($orange, 40%) !default;
-$orange-400: tint-color($orange, 20%) !default;
-$orange-500: $orange !default;
-$orange-600: shade-color($orange, 20%) !default;
-$orange-700: shade-color($orange, 40%) !default;
-$orange-800: shade-color($orange, 60%) !default;
-$orange-900: shade-color($orange, 80%) !default;
+$#049300-100: tint-color($#049300, 80%) !default;
+$#049300-200: tint-color($#049300, 60%) !default;
+$#049300-300: tint-color($#049300, 40%) !default;
+$#049300-400: tint-color($#049300, 20%) !default;
+$#049300-500: $#049300 !default;
+$#049300-600: shade-color($#049300, 20%) !default;
+$#049300-700: shade-color($#049300, 40%) !default;
+$#049300-800: shade-color($#049300, 60%) !default;
+$#049300-900: shade-color($#049300, 80%) !default;
 
 $yellow-100: tint-color($yellow, 80%) !default;
 $yellow-200: tint-color($yellow, 60%) !default;
@@ -236,16 +236,16 @@ $reds: (
   "red-900": $red-900
 ) !default;
 
-$oranges: (
-  "orange-100": $orange-100,
-  "orange-200": $orange-200,
-  "orange-300": $orange-300,
-  "orange-400": $orange-400,
-  "orange-500": $orange-500,
-  "orange-600": $orange-600,
-  "orange-700": $orange-700,
-  "orange-800": $orange-800,
-  "orange-900": $orange-900
+$#049300s: (
+  "#049300-100": $#049300-100,
+  "#049300-200": $#049300-200,
+  "#049300-300": $#049300-300,
+  "#049300-400": $#049300-400,
+  "#049300-500": $#049300-500,
+  "#049300-600": $#049300-600,
+  "#049300-700": $#049300-700,
+  "#049300-800": $#049300-800,
+  "#049300-900": $#049300-900
 ) !default;
 
 $yellows: (
