@@ -5,14 +5,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Farm House</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>  
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>  
   <link rel="shortcut icon" type="image/png" href="assets/images/logos/favicon.png" />
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/styles.min.css" />
   <link type="text/css" rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+ 
+<script>  
+  $(function() {  
+    $('#datetimepicker').datetimepicker();  
+  }); 
+   
+  </script>  
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">  
 </head>
 
 <body>
@@ -133,6 +144,7 @@
                       <div class="mb-3 col-sm-6">
                         <label for="exampleInputEmail1" class="form-label">Date:</label>
                         <input type="date" id="date" class="form-control"  aria-describedby="emailHelp">
+                        
                       </div>
                     </div>
                     <div class="row">
@@ -149,13 +161,22 @@
                     <div class="row">
                       <div class="mb-3 col-sm-6">
                         <label for="exampleInputEmail1" class="form-label">Enter Time:</label>
-                        <input type="time" id="time" class="form-control"  aria-describedby="emailHelp">
-                        
+                        <div class = 'input-group date' id='timepicker'>
+                          <input type="text" id="time" class="form-control"  aria-describedby="emailHelp">
+                          <span class = "input-group-addon">  
+                            <span class = "glyphicon glyphicon-time"></span>  
+                            </span>  
+                        </div> 
                       </div>
-                      
+                     
                       <div class="mb-3 col-sm-6">
                         <label for="exampleInputEmail1" class="form-label">Exit Time:</label>
-                        <input type="time" id="exit" class="form-control" value="10:05 AM" aria-describedby="emailHelp">
+                        <div class = 'input-group date' id='timepicker1'>
+                          <input type="text" id="exit" class="form-control"  aria-describedby="emailHelp">
+                          <span class = "input-group-addon">  
+                            <span class = "glyphicon glyphicon-time"></span>  
+                            </span>  
+                        </div> 
                       </div>
                     </div>
                     <div class="row">
@@ -214,14 +235,27 @@
       </div>
     </div>
   </div>
-  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script type = "text/javascript">  
+    $(function () {  
+        $('#timepicker').datetimepicker({  
+            format: 'LT'  
+        });  
+    }); 
+    $(function () {  
+        $('#timepicker1').datetimepicker({  
+            format: 'LT'  
+        });  
+    });  
+ </script> 
+  <!-- <script src="assets/libs/jquery/dist/jquery.min.js"></script> -->
   <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/sidebarmenu.js"></script>
   <script src="assets/js/app.min.js"></script>
   <script src="assets/libs/simplebar/dist/simplebar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+     
   <script>
     const form = document.getElementById('form'); 
     const firstName = document.getElementById('firstName');
@@ -231,6 +265,7 @@
     const duedate = document.getElementById('duedate');
     const advance = document.getElementById('advance');
     const time = document.getElementById('time');
+    // console.log(time);
     const exit = document.getElementById('exit');
     const entry = document.getElementById('entry');
     const total = document.getElementById('total');
@@ -241,18 +276,60 @@
       const farmNameValue = farmname.value;
       const phonevalue = phone.value;
       const datevalue = date.value;
+      // console.log(datevalue.toLocaleDateString());
+      function format(inputDate) {
+        let date, month, year;
+
+        date = inputDate.getDate();
+        month = inputDate.getMonth() + 1;
+        year = inputDate.getFullYear();
+
+          date = date
+              .toString()
+              .padStart(2, '0');
+
+          month = month
+              .toString()
+              .padStart(2, '0');
+
+        return `${date}/${month}/${year}`;
+      }
+
+      const finaldate = format(new Date(datevalue));
+
       const duedatevalue = duedate.value;
+      function format1(inputDate) {
+        let date, month, year;
+
+        date = inputDate.getDate();
+        month = inputDate.getMonth() + 1;
+        year = inputDate.getFullYear();
+
+          date = date
+              .toString()
+              .padStart(2, '0');
+
+          month = month
+              .toString()
+              .padStart(2, '0');
+
+        return `${date}/${month}/${year}`;
+      }
+
+      const finalduedate = format1(new Date(duedatevalue));
+
       const advancevalue = advance.value;
       const timevalue = time.value;
       const exitvalue = exit.value;
       const entryvalue = entry.value;
       const totalvalue = total.value;
       const notevalue = note.value;
-      sessionStorage.setItem("myObject", JSON.stringify([firstNameValue,farmNameValue,phonevalue,datevalue,duedatevalue,advancevalue,timevalue,exitvalue,entryvalue,totalvalue,notevalue]));
+      sessionStorage.setItem("myObject", JSON.stringify([firstNameValue,farmNameValue,phonevalue,finaldate,finalduedate,advancevalue,timevalue,exitvalue,entryvalue,totalvalue,notevalue]));
 
       window.location.href="index.html";
     })
   </script>
+  
 </body>
 
 </html>
